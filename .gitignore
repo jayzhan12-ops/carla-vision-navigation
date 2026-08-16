@@ -1,0 +1,23 @@
+# Python environment
+carla_venv/
+.venv/
+
+# CARLA installation
+WindowsNoEditor/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local editor configuration
+.vscode/
+
+# Future generated files
+data/
+checkpoints/
+*.pt
+*.pth
+*.mp4
+
+# Secrets
+.env
