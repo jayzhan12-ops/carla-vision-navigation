@@ -1,26 +1,27 @@
-import math
-import random
-import time
+import math #calculates speed from velocity vector
+import random #randomizes the spawn point of the vehicle
+import time #pauses the program to allow the vehicle to move for a few seconds
 
-import carla
+import carla #communicates w the simulator
 
 
-def calculate_speed_kmh(vehicle):
+def calculate_speed_kmh(vehicle): #speed calculation function, returns speed in m/s
     velocity = vehicle.get_velocity()
 
-    speed_mps = math.sqrt(
+    speed_mps = math.sqrt( #speed_mps = length of 3D vector
         velocity.x**2
         + velocity.y**2
         + velocity.z**2
     )
 
-    return speed_mps * 3.6
+    return speed_mps * 3.6 #convertion 
 
 
 client = carla.Client("localhost", 2000)
 client.set_timeout(10.0)
 
 world = client.get_world()
+
 vehicle = None
 
 try:
