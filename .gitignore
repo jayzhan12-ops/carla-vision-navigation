@@ -13,7 +13,7 @@ __pycache__/
 .vscode/
 
 # Future generated files
-data/
+data/dataset/
 checkpoints/
 *.pt
 *.pth
